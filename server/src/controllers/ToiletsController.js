@@ -22,6 +22,17 @@ module.exports = {
         } catch (error) {
             console.log(error)
             res.status(400).send({
+                error: 'This one is already here.'
+            })
+        }
+    },
+    async show (req, res) {
+        try {
+            const toilet = await Toilet.findById(req.params.toiletId)
+            res.send(toilet)
+        } catch (error) {
+            console.log(error)
+            res.status(400).send({
                 error: 'error trying to create the toilets.'
             })
         }

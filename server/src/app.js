@@ -15,6 +15,15 @@ app.use(cors())
 
 require('./routes/routes')(app)
 
+// Determining if crypto support is unavailable
+// let crypto
+// try {
+//     crypto = require('crypto')
+//     console.log('crypto support is enabled!')
+//     console.log(crypto.crypto.Certificate())
+// } catch (err) {
+//     console.log('crypto support is disabled!')
+// }
 // app.post('/register', (req, res) => {
 //     res.send({
 //         message: `Hello ${req.body.email}!`

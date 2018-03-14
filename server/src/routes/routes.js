@@ -12,4 +12,5 @@ module.exports = (app) => {
 
     app.post('/addtoilet', ToiletsController.add)
     app.get('/toilets', ToiletsController.index)
+    app.get('/toilets/:toiletId', ToiletsController.show)
 }

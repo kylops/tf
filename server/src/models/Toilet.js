@@ -1,14 +1,13 @@
-module.exports = (sequelize, DataTypes) => {
-    const Toilet = sequelize.define('Toilet', {
-        // username: {
-        //     type: DataTypes.STRING,
-        //     unique: true
-        // },
-        name: DataTypes.STRING,
-        address: DataTypes.STRING,
-        lat: DataTypes.FLOAT,
-        lng: DataTypes.FLOAT
-    })
-
-    return Toilet
-}
+module.exports = (sequelize, DataTypes) => sequelize.define('Toilet', {
+    // username: {
+    //     type: DataTypes.STRING,
+    //     unique: true
+    // },
+    name: {
+        type: DataTypes.STRING,
+        unique: true
+    },
+    address: DataTypes.STRING,
+    lat: DataTypes.FLOAT,
+    lng: DataTypes.FLOAT
+})
