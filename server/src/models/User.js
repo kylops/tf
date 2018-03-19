@@ -8,7 +8,7 @@ function hashPassword (user, options) {
     }
     return bcrypt.hash(user.password, null, null, function (err, hash) {
         if (!err) {
-            user.setDataValue('password', hash)
+            user.setDataValue('password', user.password)
         }
     })
     // return bcrypt
